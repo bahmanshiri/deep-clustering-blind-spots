@@ -1,0 +1,179 @@
+{
+  "config": {
+    "seed": 0,
+    "representation": "StandardScaler -> PCA -> top-2 components",
+    "hyperparameter_selection": "grid search against ground-truth ARI (oracle/best-case for baselines, see HONESTY NOTE in script)"
+  },
+  "rows": [
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_A_distance (class_label, k*=4)",
+      "method": "KMeans (naive reference)",
+      "ARI": 0.1147,
+      "NMI": 0.0998,
+      "n_clusters_found": 4,
+      "best_params": "{\"n_clusters\": 4}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_A_distance (class_label, k*=4)",
+      "method": "Spectral Clustering (grid-searched)",
+      "ARI": 0.0817,
+      "NMI": 0.084,
+      "n_clusters_found": 3,
+      "best_params": "{\"n_clusters\": 3, \"n_neighbors\": 20}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_A_distance (class_label, k*=4)",
+      "method": "DBSCAN (grid-searched)",
+      "ARI": 0.0021,
+      "NMI": 0.0289,
+      "n_clusters_found": 69,
+      "best_params": "{\"eps\": 0.0488, \"min_samples\": 10}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_B_relational (hidden subgroup, k*=2)",
+      "method": "KMeans (naive reference)",
+      "ARI": 0.0595,
+      "NMI": 0.0574,
+      "n_clusters_found": 3,
+      "best_params": "{\"n_clusters\": 3}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_B_relational (hidden subgroup, k*=2)",
+      "method": "Spectral Clustering (grid-searched)",
+      "ARI": 0.0178,
+      "NMI": 0.0475,
+      "n_clusters_found": 3,
+      "best_params": "{\"n_clusters\": 3, \"n_neighbors\": 20}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_B_relational (hidden subgroup, k*=2)",
+      "method": "DBSCAN (grid-searched)",
+      "ARI": 0.7206,
+      "NMI": 0.5207,
+      "n_clusters_found": 3,
+      "best_params": "{\"eps\": 0.222, \"min_samples\": 20}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_C_scale (hidden subgroup, k*=2)",
+      "method": "KMeans (naive reference)",
+      "ARI": -0.0,
+      "NMI": 0.0012,
+      "n_clusters_found": 2,
+      "best_params": "{\"n_clusters\": 2}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_C_scale (hidden subgroup, k*=2)",
+      "method": "Spectral Clustering (grid-searched)",
+      "ARI": -0.0,
+      "NMI": 0.0002,
+      "n_clusters_found": 2,
+      "best_params": "{\"n_clusters\": 2, \"n_neighbors\": 20}"
+    },
+    {
+      "dataset": "Synthetic benchmark (N=8000)",
+      "target": "mechanism_C_scale (hidden subgroup, k*=2)",
+      "method": "DBSCAN (grid-searched)",
+      "ARI": 0.0074,
+      "NMI": 0.0136,
+      "n_clusters_found": 220,
+      "best_params": "{\"eps\": 0.0253, \"min_samples\": 5}"
+    },
+    {
+      "dataset": "Wine",
+      "target": "true class label",
+      "method": "KMeans (naive reference)",
+      "ARI": 0.8951,
+      "NMI": 0.8821,
+      "n_clusters_found": 3,
+      "best_params": "{\"n_clusters\": 3}"
+    },
+    {
+      "dataset": "Wine",
+      "target": "true class label",
+      "method": "Spectral Clustering (grid-searched)",
+      "ARI": 0.8961,
+      "NMI": 0.8583,
+      "n_clusters_found": 3,
+      "best_params": "{\"n_clusters\": 3, \"n_neighbors\": 10}"
+    },
+    {
+      "dataset": "Wine",
+      "target": "true class label",
+      "method": "DBSCAN (grid-searched)",
+      "ARI": 0.7388,
+      "NMI": 0.737,
+      "n_clusters_found": 3,
+      "best_params": "{\"eps\": 0.9861, \"min_samples\": 20}"
+    },
+    {
+      "dataset": "Breast Cancer",
+      "target": "true class label",
+      "method": "KMeans (naive reference)",
+      "ARI": 0.6592,
+      "NMI": 0.5404,
+      "n_clusters_found": 2,
+      "best_params": "{\"n_clusters\": 2}"
+    },
+    {
+      "dataset": "Breast Cancer",
+      "target": "true class label",
+      "method": "Spectral Clustering (grid-searched)",
+      "ARI": 0.6661,
+      "NMI": 0.5443,
+      "n_clusters_found": 2,
+      "best_params": "{\"n_clusters\": 2, \"n_neighbors\": 20}"
+    },
+    {
+      "dataset": "Breast Cancer",
+      "target": "true class label",
+      "method": "DBSCAN (grid-searched)",
+      "ARI": 0.5547,
+      "NMI": 0.4494,
+      "n_clusters_found": 2,
+      "best_params": "{\"eps\": 1.0977, \"min_samples\": 20}"
+    },
+    {
+      "dataset": "Digits",
+      "target": "true class label",
+      "method": "KMeans (naive reference)",
+      "ARI": 0.3365,
+      "NMI": 0.4815,
+      "n_clusters_found": 9,
+      "best_params": "{\"n_clusters\": 9}"
+    },
+    {
+      "dataset": "Digits",
+      "target": "true class label",
+      "method": "Spectral Clustering (grid-searched)",
+      "ARI": 0.3358,
+      "NMI": 0.473,
+      "n_clusters_found": 9,
+      "best_params": "{\"n_clusters\": 9, \"n_neighbors\": 10}"
+    },
+    {
+      "dataset": "Digits",
+      "target": "true class label",
+      "method": "DBSCAN (grid-searched)",
+      "ARI": 0.1369,
+      "NMI": 0.313,
+      "n_clusters_found": 5,
+      "best_params": "{\"eps\": 0.4684, \"min_samples\": 20}"
+    }
+  ],
+  "paper_hand_informed_pipeline_ARI_for_reference": {
+    "ARI_class_label__distance_kmeans_on_feature_1_2": 0.9650082443959267,
+    "ARI_relational_hidden__polar_dbscan_on_feature_3_4": 0.9153705484661201,
+    "ARI_scale_hidden__knn_density_gmm_on_feature_5_6": 0.6621410799661955,
+    "ARI_scale_hidden__theoretical_ceiling_same_signal": 0.8610498420991108,
+    "dbscan_relational_found_cluster_size": 923,
+    "density_scale_found_cluster_size": 204
+  }
+}

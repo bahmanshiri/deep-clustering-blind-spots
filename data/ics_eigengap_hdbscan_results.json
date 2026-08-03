@@ -1,0 +1,34 @@
+{
+  "description": "Priority 5: eigengap-based automatic routing confidence + HDBSCAN within-pair clustering, replacing ics_kurtosis_screening.py's GMM-based (fixed-prior) final-clustering step. No minority-fraction prior and no fixed number-of-components assumption is used anywhere in this script; ground-truth labels are used only for ARI/AUC scoring.",
+  "headline_seed42": {
+    "detected_pair": "feature_3,feature_4",
+    "routing_correct": true,
+    "routing_confident_eigengap": true,
+    "eigengap_ratio": 0.8314559977079508,
+    "pair_scores": {
+      "feature_1,feature_2": 10.680526986941548,
+      "feature_3,feature_4": 63.36936848358093,
+      "feature_5,feature_6": 8.362506267069888,
+      "feature_7,feature_8": 3.1910676027026543,
+      "feature_9,feature_10": 3.252275764944563,
+      "feature_2,feature_5": 10.569006308893004,
+      "feature_1,feature_8": 6.9194492294341075
+    },
+    "n_clusters_found_hdbscan": 2,
+    "ari_hdbscan": 0.8359386730038144,
+    "oracle_ceiling_ari": 0.9442448702347642,
+    "oracle_ceiling_auc": 0.9992737926136364
+  },
+  "multi_seed_summary_N80": {
+    "n_seeds": 80,
+    "routing_accuracy": 1.0,
+    "routing_confident_fraction": 1.0,
+    "mean_eigengap_ratio": 0.8305063366869178,
+    "mean_ari_hdbscan_on_detected_pair": 0.8305831649836563,
+    "sd_ari_hdbscan_on_detected_pair": 0.059242586072357176,
+    "mean_oracle_ari_on_detected_pair": 0.9377830536330455,
+    "sd_oracle_ari_on_detected_pair": 0.00545246446056908,
+    "mean_n_clusters_found_hdbscan": 2.3125,
+    "mean_ari_hdbscan_true_scale_pair": 0.07215962288158342
+  }
+}

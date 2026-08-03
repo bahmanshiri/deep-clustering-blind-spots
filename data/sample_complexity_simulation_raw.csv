@@ -1,0 +1,7 @@
+d,n_min_eps_hat,eps_hit_ceiling,n_min_E2_hat,E2_hit_ceiling
+10,3557,False,420,False
+20,4456,False,909,False
+40,5660,False,1989,False
+80,6088,False,4110,False
+160,7860,False,8025,False
+320,8192,False,15997,False

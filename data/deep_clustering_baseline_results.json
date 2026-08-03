@@ -1,0 +1,99 @@
+{
+  "device": "cuda",
+  "calibration_check": {
+    "reconstruction_mse": 0.6243,
+    "ari_at_k4": 0.0001,
+    "ari_relational_hidden_at_k4": 0.4604,
+    "reconstruction_mse_within_tolerance": true,
+    "ari_at_k4_within_known_range": true,
+    "ari_relational_within_known_range": true,
+    "passed": true
+  },
+  "headline_seed0_per_architecture": {
+    "minimal": {
+      "seed": 0,
+      "reconstruction_mse": 0.6825,
+      "n_training_epochs": 913,
+      "ari_a": 0.004,
+      "ari_b": 0.165,
+      "ari_c": 0.001,
+      "architecture": "minimal: input-16-2-16-input, ReLU, Adam, mini-batch=256, device=cuda"
+    },
+    "wide": {
+      "seed": 0,
+      "reconstruction_mse": 0.5824,
+      "n_training_epochs": 358,
+      "ari_a": 0.053,
+      "ari_b": 0.087,
+      "ari_c": 0.002,
+      "architecture": "wide: input-64-32-2-32-64-input, ReLU, Adam, mini-batch=256, device=cuda"
+    }
+  },
+  "multiseed_n80_per_architecture": {
+    "minimal": {
+      "n_seeds": 80,
+      "recovery_threshold_ari": 0.3,
+      "ari_a_distance_mechanism": {
+        "mean": 0.11761249999999998,
+        "sd": 0.17237385729052762,
+        "min": 0.0,
+        "max": 0.653
+      },
+      "ari_b_relational_mechanism": {
+        "mean": 0.3153625,
+        "sd": 0.22657573376889106,
+        "min": -0.001,
+        "max": 0.812
+      },
+      "ari_c_scale_mechanism": {
+        "mean": -0.0013375,
+        "sd": 0.006525400710330343,
+        "min": -0.031,
+        "max": 0.014
+      },
+      "reconstruction_mse": {
+        "mean": 0.6242924999999999,
+        "sd": 0.04646886197133939
+      },
+      "mean_epochs_to_stop": 1390.525,
+      "frac_seeds_hit_max_epochs": 0.0,
+      "frac_seeds_A_recovered": 0.2,
+      "frac_seeds_B_recovered": 0.4875,
+      "frac_seeds_both_recovered": 0.0,
+      "frac_seeds_neither_recovered": 0.3125
+    },
+    "wide": {
+      "n_seeds": 80,
+      "recovery_threshold_ari": 0.3,
+      "ari_a_distance_mechanism": {
+        "mean": 0.1614875,
+        "sd": 0.16010344707664098,
+        "min": 0.0,
+        "max": 0.621
+      },
+      "ari_b_relational_mechanism": {
+        "mean": 0.19369999999999998,
+        "sd": 0.16836709441281172,
+        "min": -0.045,
+        "max": 0.853
+      },
+      "ari_c_scale_mechanism": {
+        "mean": -0.0004,
+        "sd": 0.004524476331681863,
+        "min": -0.02,
+        "max": 0.015
+      },
+      "reconstruction_mse": {
+        "mean": 0.5152412500000001,
+        "sd": 0.055895210939870855
+      },
+      "mean_epochs_to_stop": 682.925,
+      "frac_seeds_hit_max_epochs": 0.0,
+      "frac_seeds_A_recovered": 0.2875,
+      "frac_seeds_B_recovered": 0.175,
+      "frac_seeds_both_recovered": 0.0,
+      "frac_seeds_neither_recovered": 0.5375
+    }
+  },
+  "interpretation": "Mechanisms A and B trade off within a single 2-unit bottleneck: no seed recovers both at once in either architecture. Widening the network from minimal to wide improves reconstruction error but does not resolve, and somewhat worsens, this trade-off, indicating that bottleneck capacity is not the limiting factor."
+}

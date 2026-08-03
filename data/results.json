@@ -1,0 +1,44 @@
+{
+  "naive": {
+    "explained_variance_ratio_per_PC": [
+      0.15344698105221488,
+      0.10698032448173968,
+      0.10333101458510413,
+      0.10148176867401057,
+      0.10138425270564488,
+      0.0988291250731215,
+      0.09838528646058398,
+      0.09608989017470813,
+      0.0932093388584319,
+      0.04686201793444018
+    ],
+    "silhouette_by_k": {
+      "2": 0.29210386336970273,
+      "3": 0.3204884054486553,
+      "4": 0.3822239450351252,
+      "5": 0.3131254221153156,
+      "6": 0.3316159959427762
+    },
+    "best_k_by_silhouette": 4,
+    "ARI_class_label__vs__naive_k_equal_best": 0.11469845191388345,
+    "ARI_class_label__vs__naive_k4": 0.11469845191388345,
+    "ARI_relational_hidden__vs__naive_k4": 0.2367005371225226,
+    "ARI_relational_hidden__vs__naive_k5": 0.15230595019075885,
+    "ARI_scale_hidden__vs__naive_k4": 0.0012411395703716029,
+    "ARI_scale_hidden__vs__naive_k5": -7.832007079681598e-05
+  },
+  "naive_no_pca_all_features": {
+    "ARI_class_label": 0.4141403125409779,
+    "ARI_relational_hidden": 0.26531757810370127,
+    "ARI_scale_hidden": 0.0002483256153040244,
+    "silhouette": 0.1038081051482788
+  },
+  "informed": {
+    "ARI_class_label__distance_kmeans_on_feature_1_2": 0.9650082443959267,
+    "ARI_relational_hidden__polar_dbscan_on_feature_3_4": 0.9153705484661201,
+    "ARI_scale_hidden__knn_density_gmm_on_feature_5_6": 0.6621410799661955,
+    "ARI_scale_hidden__theoretical_ceiling_same_signal": 0.8610498420991108,
+    "dbscan_relational_found_cluster_size": 923,
+    "density_scale_found_cluster_size": 204
+  }
+}

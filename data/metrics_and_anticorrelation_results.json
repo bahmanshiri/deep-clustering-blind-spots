@@ -1,0 +1,51 @@
+{
+  "seed42_metrics_by_k": {
+    "2": {
+      "silhouette": 0.29210386336970273,
+      "ARI": 0.06062566654571074,
+      "NMI": 0.05984448410269758,
+      "Purity": 0.348625
+    },
+    "3": {
+      "silhouette": 0.3204884054486553,
+      "ARI": 0.10630931156752295,
+      "NMI": 0.09885504270665685,
+      "Purity": 0.368375
+    },
+    "4": {
+      "silhouette": 0.3822239450351252,
+      "ARI": 0.11469845191388345,
+      "NMI": 0.09983994127254887,
+      "Purity": 0.37375
+    },
+    "5": {
+      "silhouette": 0.3131254221153156,
+      "ARI": 0.08007950631837008,
+      "NMI": 0.10081513956631084,
+      "Purity": 0.35825
+    },
+    "6": {
+      "silhouette": 0.3316159959427762,
+      "ARI": 0.07104732714824961,
+      "NMI": 0.09007886313824577,
+      "Purity": 0.36025
+    }
+  },
+  "within_seed_k_sweep_spearman_sil_vs_ari": {
+    "rho": 0.7,
+    "p": 0.1881204043741873,
+    "n_k_values": 5,
+    "caveat": "n=5 (k=2..6) is too small for a meaningful p-value on its own; reported mainly for completeness alongside the across-seed test below."
+  },
+  "across_seed_k4_fixed_spearman_sil_vs_ari": {
+    "rho": 0.16057196436943275,
+    "p": 0.15478062986325866,
+    "n_seeds": 80
+  },
+  "across_seed_k4_fixed_pearson_sil_vs_ari": {
+    "r": 0.20451941439062007,
+    "p": 0.06879337974026198,
+    "n_seeds": 80
+  },
+  "interpretation": "A near-zero or negative correlation between Silhouette and ARI across seeds at the fixed, Silhouette-preferred k=4 would support the claim that Silhouette provides no signal about (or actively misleads about) true recovery quality in this regime, beyond the single-seed anecdote."
+}

@@ -1,0 +1,71 @@
+{
+  "purpose": "Re-runs the mechanism-interaction ablation (originally single-configuration, N=80) at 3 additional points from the existing Section 4.3 parameter grid, to test whether the reported null-interaction finding generalizes across mechanism strength or was specific to the default configuration.",
+  "configurations": {
+    "default (existing, N=80, not re-run here)": {
+      "relational_fraction": 0.12,
+      "ratio": 2.3,
+      "n_seeds": 80,
+      "mean_ARI_k4_by_config": {
+        "A_only": 0.08034915838732054,
+        "A_plus_B": 0.05806304816811557,
+        "A_plus_C": 0.08195573553918006,
+        "A_plus_B_plus_C": 0.05943997884451145
+      },
+      "mean_interaction_effect": 0.000229646475463674,
+      "std_interaction_effect": 0.055354531361910576,
+      "interaction_effect_positive_fraction_of_seeds": 0.525,
+      "wilcoxon_pvalue": 0.847858538655998
+    },
+    "weak": {
+      "relational_fraction": 0.04,
+      "ratio": 1.6,
+      "n_seeds": 80,
+      "mean_ARI_k4_by_config": {
+        "A_only": 0.08794419636073172,
+        "A_plus_B": 0.05461079532444953,
+        "A_plus_C": 0.08709685447641889,
+        "A_plus_B_plus_C": 0.04679201477526911
+      },
+      "mean_interaction_effect": 0.006971438664867593,
+      "std_interaction_effect": 0.05493181225514561,
+      "interaction_effect_positive_fraction_of_seeds": 0.575,
+      "wilcoxon_pvalue": 0.19203245558852333
+    },
+    "strong": {
+      "relational_fraction": 0.2,
+      "ratio": 3.0,
+      "n_seeds": 80,
+      "mean_ARI_k4_by_config": {
+        "A_only": 0.08684766759408309,
+        "A_plus_B": 0.05455196478422301,
+        "A_plus_C": 0.08329181092164464,
+        "A_plus_B_plus_C": 0.058739123819494296
+      },
+      "mean_interaction_effect": -0.007743015707709805,
+      "std_interaction_effect": 0.057454754286242096,
+      "interaction_effect_positive_fraction_of_seeds": 0.475,
+      "wilcoxon_pvalue": 0.2267918145113511
+    },
+    "extreme": {
+      "relational_fraction": 0.3,
+      "ratio": 4.0,
+      "n_seeds": 80,
+      "mean_ARI_k4_by_config": {
+        "A_only": 0.08121234048455757,
+        "A_plus_B": 0.0485700376613721,
+        "A_plus_C": 0.08486692261549016,
+        "A_plus_B_plus_C": 0.05185543041578685
+      },
+      "mean_interaction_effect": 0.0003691893765178131,
+      "std_interaction_effect": 0.05081245121662394,
+      "interaction_effect_positive_fraction_of_seeds": 0.575,
+      "wilcoxon_pvalue": 0.47779684636432396
+    }
+  },
+  "all_four_null_or_not": {
+    "default (existing, N=80, not re-run here)": "null (equivalent to additive)",
+    "weak": "null (equivalent to additive)",
+    "strong": "null (equivalent to additive)",
+    "extreme": "null (equivalent to additive)"
+  }
+}

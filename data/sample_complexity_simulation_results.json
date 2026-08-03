@@ -1,0 +1,91 @@
+{
+  "config": {
+    "dims": [
+      10,
+      20,
+      40,
+      80,
+      160,
+      320
+    ],
+    "n_signal_blocks": 3,
+    "block_size": 2,
+    "rho": 0.3,
+    "target_eps": 0.05,
+    "target_E2": 0.3,
+    "n_trials": 10,
+    "quantile": 0.9,
+    "seed": 42
+  },
+  "per_dimension": [
+    {
+      "d": 10,
+      "n_min_eps_hat": 3557,
+      "eps_hit_ceiling": false,
+      "n_min_E2_hat": 420,
+      "E2_hit_ceiling": false
+    },
+    {
+      "d": 20,
+      "n_min_eps_hat": 4456,
+      "eps_hit_ceiling": false,
+      "n_min_E2_hat": 909,
+      "E2_hit_ceiling": false
+    },
+    {
+      "d": 40,
+      "n_min_eps_hat": 5660,
+      "eps_hit_ceiling": false,
+      "n_min_E2_hat": 1989,
+      "E2_hit_ceiling": false
+    },
+    {
+      "d": 80,
+      "n_min_eps_hat": 6088,
+      "eps_hit_ceiling": false,
+      "n_min_E2_hat": 4110,
+      "E2_hit_ceiling": false
+    },
+    {
+      "d": 160,
+      "n_min_eps_hat": 7860,
+      "eps_hit_ceiling": false,
+      "n_min_E2_hat": 8025,
+      "E2_hit_ceiling": false
+    },
+    {
+      "d": 320,
+      "n_min_eps_hat": 8192,
+      "eps_hit_ceiling": false,
+      "n_min_E2_hat": 15997,
+      "E2_hit_ceiling": false
+    }
+  ],
+  "fit_eps_hat": {
+    "log_d_fit": {
+      "a": 1393.849508790295,
+      "b": 344.01908965858183,
+      "rmse": 257.9096987288627
+    },
+    "d_log_d_fit": {
+      "a": 2.225191663280384,
+      "b": 4767.6198614047435,
+      "rmse": 867.8770697025146
+    }
+  },
+  "fit_E2_hat": {
+    "log_d_fit": {
+      "a": 4177.797519264574,
+      "b": -11617.639051310878,
+      "rmse": 2256.5908955416066
+    },
+    "d_log_d_fit": {
+      "a": 8.458211189249033,
+      "b": 675.7151593861624,
+      "rmse": 369.31190144966024
+    }
+  },
+  "better_fit_eps_hat": "log(d)",
+  "better_fit_E2_hat": "d*log(d)",
+  "interpretation": "If eps_hat's better fit is log(d) and E2_hat's better fit is d*log(d): the entrywise story (Corollary 1) supports a 'dimension-free' framing (mild, log-d sample growth suffices to keep any single cross-block correlation small), but the quantity that actually enters Theorem 1's eigenvalue-perturbation bound (||E||_2) requires sample size scaling with d (matching Theorem 2's stated n >~ d*log(d/delta) regime hypothesis) to stay controlled. This is a precise, checkable basis for a nuanced response to the reviewer: 'Dimension-Free' is defensible as a statement about the bound's FORM once epsilon is fixed, but the paper should say explicitly, near the term's first use, that keeping the operative epsilon small at large d is not free -- it costs sample size scaling with d, exactly as Theorem 2 already states."
+}

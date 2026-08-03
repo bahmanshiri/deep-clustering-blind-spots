@@ -1,0 +1,350 @@
+{
+  "purpose": "Re-runs ICS kurtosis-screening routing (ics_kurtosis_screening.py, Section 5.5) across the identical (relational_fraction x ratio) 2D grid already used to stress-test Theorem 1 (parameter_space_sweep.py, Section 4.3), so ICS's positive routing result is held to the same generalization standard as the rest of the paper rather than being reported at a single configuration only.",
+  "grid": {
+    "relational_fraction_levels": [
+      0.02,
+      0.04,
+      0.08,
+      0.12,
+      0.2,
+      0.3
+    ],
+    "ratio_levels": [
+      1.2,
+      1.6,
+      2.3,
+      3.0,
+      4.0
+    ],
+    "seeds_per_cell": 15,
+    "seed_range": [
+      5000,
+      5014
+    ],
+    "n_per_class": 500,
+    "total_cells": 30,
+    "total_runs": 450
+  },
+  "overall_routing_accuracy": 1.0,
+  "n_cells_at_100pct_routing": 30,
+  "n_cells_below_100pct_routing": 0,
+  "worst_cell": {
+    "relational_fraction": 0.02,
+    "ratio": 1.2,
+    "routing_accuracy": 1.0
+  },
+  "original_paper_configuration_check": [
+    {
+      "relational_fraction": 0.12,
+      "ratio": 2.3,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 63.25368719236625,
+      "mean_kurtosis_dev_strongest_competitor": 10.878649798201927,
+      "mean_oracle_ari_on_detected_pair": 0.9392589011921114
+    }
+  ],
+  "cell_summary": [
+    {
+      "relational_fraction": 0.02,
+      "ratio": 1.2,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 11.99322914721937,
+      "mean_kurtosis_dev_strongest_competitor": 10.877060112393208,
+      "mean_oracle_ari_on_detected_pair": 0.6358346758101843
+    },
+    {
+      "relational_fraction": 0.02,
+      "ratio": 1.6,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 16.72737672379769,
+      "mean_kurtosis_dev_strongest_competitor": 10.877060112393208,
+      "mean_oracle_ari_on_detected_pair": 0.7425942537951188
+    },
+    {
+      "relational_fraction": 0.02,
+      "ratio": 2.3,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 33.26931618992112,
+      "mean_kurtosis_dev_strongest_competitor": 10.877060112393208,
+      "mean_oracle_ari_on_detected_pair": 0.8872444375021694
+    },
+    {
+      "relational_fraction": 0.02,
+      "ratio": 3.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 63.087365352150485,
+      "mean_kurtosis_dev_strongest_competitor": 10.877060112393208,
+      "mean_oracle_ari_on_detected_pair": 0.9628897901449448
+    },
+    {
+      "relational_fraction": 0.02,
+      "ratio": 4.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 131.46187119572568,
+      "mean_kurtosis_dev_strongest_competitor": 10.877060112393208,
+      "mean_oracle_ari_on_detected_pair": 0.9964633341621559
+    },
+    {
+      "relational_fraction": 0.04,
+      "ratio": 1.2,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 14.792505811751452,
+      "mean_kurtosis_dev_strongest_competitor": 10.869568438764512,
+      "mean_oracle_ari_on_detected_pair": 0.6955145888340124
+    },
+    {
+      "relational_fraction": 0.04,
+      "ratio": 1.6,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 22.259545785246907,
+      "mean_kurtosis_dev_strongest_competitor": 10.869568438764512,
+      "mean_oracle_ari_on_detected_pair": 0.7959170636403817
+    },
+    {
+      "relational_fraction": 0.04,
+      "ratio": 2.3,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 45.80465798506436,
+      "mean_kurtosis_dev_strongest_competitor": 10.869568438764512,
+      "mean_oracle_ari_on_detected_pair": 0.9177598197945476
+    },
+    {
+      "relational_fraction": 0.04,
+      "ratio": 3.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 84.03475645974677,
+      "mean_kurtosis_dev_strongest_competitor": 10.869568438764512,
+      "mean_oracle_ari_on_detected_pair": 0.9765440348862938
+    },
+    {
+      "relational_fraction": 0.04,
+      "ratio": 4.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 164.06280874885172,
+      "mean_kurtosis_dev_strongest_competitor": 10.869568438764512,
+      "mean_oracle_ari_on_detected_pair": 0.9990606330267151
+    },
+    {
+      "relational_fraction": 0.08,
+      "ratio": 1.2,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 18.599688988829712,
+      "mean_kurtosis_dev_strongest_competitor": 10.896468902261734,
+      "mean_oracle_ari_on_detected_pair": 0.7342811119785108
+    },
+    {
+      "relational_fraction": 0.08,
+      "ratio": 1.6,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 28.80736281381111,
+      "mean_kurtosis_dev_strongest_competitor": 10.896468902261734,
+      "mean_oracle_ari_on_detected_pair": 0.8251836495121504
+    },
+    {
+      "relational_fraction": 0.08,
+      "ratio": 2.3,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 57.842555761001336,
+      "mean_kurtosis_dev_strongest_competitor": 10.896468902261734,
+      "mean_oracle_ari_on_detected_pair": 0.9338685081846312
+    },
+    {
+      "relational_fraction": 0.08,
+      "ratio": 3.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 101.10558069134792,
+      "mean_kurtosis_dev_strongest_competitor": 10.896468902261734,
+      "mean_oracle_ari_on_detected_pair": 0.9851605555385512
+    },
+    {
+      "relational_fraction": 0.08,
+      "ratio": 4.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 186.5176937217166,
+      "mean_kurtosis_dev_strongest_competitor": 10.896468902261734,
+      "mean_oracle_ari_on_detected_pair": 0.9978776513934163
+    },
+    {
+      "relational_fraction": 0.12,
+      "ratio": 1.2,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 20.862439207084428,
+      "mean_kurtosis_dev_strongest_competitor": 10.878649798201927,
+      "mean_oracle_ari_on_detected_pair": 0.7288216360132316
+    },
+    {
+      "relational_fraction": 0.12,
+      "ratio": 1.6,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 32.27841800973666,
+      "mean_kurtosis_dev_strongest_competitor": 10.878649798201927,
+      "mean_oracle_ari_on_detected_pair": 0.8224984347621904
+    },
+    {
+      "relational_fraction": 0.12,
+      "ratio": 2.3,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 63.25368719236625,
+      "mean_kurtosis_dev_strongest_competitor": 10.878649798201927,
+      "mean_oracle_ari_on_detected_pair": 0.9392589011921114
+    },
+    {
+      "relational_fraction": 0.12,
+      "ratio": 3.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 107.89317170210332,
+      "mean_kurtosis_dev_strongest_competitor": 10.878649798201927,
+      "mean_oracle_ari_on_detected_pair": 0.9860396911603028
+    },
+    {
+      "relational_fraction": 0.12,
+      "ratio": 4.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 194.37475099734425,
+      "mean_kurtosis_dev_strongest_competitor": 10.878649798201927,
+      "mean_oracle_ari_on_detected_pair": 0.9988005204669427
+    },
+    {
+      "relational_fraction": 0.2,
+      "ratio": 1.2,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 23.635892917340303,
+      "mean_kurtosis_dev_strongest_competitor": 10.860815979177321,
+      "mean_oracle_ari_on_detected_pair": 0.7325671021740202
+    },
+    {
+      "relational_fraction": 0.2,
+      "ratio": 1.6,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 36.23844526932252,
+      "mean_kurtosis_dev_strongest_competitor": 10.860815979177321,
+      "mean_oracle_ari_on_detected_pair": 0.830313413751332
+    },
+    {
+      "relational_fraction": 0.2,
+      "ratio": 2.3,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 68.82824653409425,
+      "mean_kurtosis_dev_strongest_competitor": 10.860815979177321,
+      "mean_oracle_ari_on_detected_pair": 0.9434355198368898
+    },
+    {
+      "relational_fraction": 0.2,
+      "ratio": 3.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 114.4373499024435,
+      "mean_kurtosis_dev_strongest_competitor": 10.860815979177321,
+      "mean_oracle_ari_on_detected_pair": 0.9899133730377728
+    },
+    {
+      "relational_fraction": 0.2,
+      "ratio": 4.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 201.53631698162613,
+      "mean_kurtosis_dev_strongest_competitor": 10.860815979177321,
+      "mean_oracle_ari_on_detected_pair": 0.9984693087748344
+    },
+    {
+      "relational_fraction": 0.3,
+      "ratio": 1.2,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 25.717646336060177,
+      "mean_kurtosis_dev_strongest_competitor": 10.831893451193016,
+      "mean_oracle_ari_on_detected_pair": 0.5786884848742292
+    },
+    {
+      "relational_fraction": 0.3,
+      "ratio": 1.6,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 38.98049446498529,
+      "mean_kurtosis_dev_strongest_competitor": 10.831893451193016,
+      "mean_oracle_ari_on_detected_pair": 0.6093197502283202
+    },
+    {
+      "relational_fraction": 0.3,
+      "ratio": 2.3,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 72.41731673337198,
+      "mean_kurtosis_dev_strongest_competitor": 10.831893451193016,
+      "mean_oracle_ari_on_detected_pair": 0.6176614063108411
+    },
+    {
+      "relational_fraction": 0.3,
+      "ratio": 3.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 118.57170181866512,
+      "mean_kurtosis_dev_strongest_competitor": 10.831893451193016,
+      "mean_oracle_ari_on_detected_pair": 0.6178875602659134
+    },
+    {
+      "relational_fraction": 0.3,
+      "ratio": 4.0,
+      "routing_accuracy": 1.0,
+      "n_correct": 15,
+      "n": 15,
+      "mean_kurtosis_dev_true_pair": 206.1788520116459,
+      "mean_kurtosis_dev_strongest_competitor": 10.831893451193016,
+      "mean_oracle_ari_on_detected_pair": 0.6178875602659134
+    }
+  ]
+}

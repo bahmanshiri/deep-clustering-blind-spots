@@ -1,0 +1,18 @@
+{
+  "n_seeds": 80,
+  "mechanism_B_relational": {
+    "radius_auc_mean": 0.9969454327207623,
+    "radius_auc_std": 0.0003691830321048001,
+    "radius_oracle_ari_mean": 0.875300463369625,
+    "radius_oracle_ari_std": 0.009059343184344105,
+    "raw_kmeans_k2_on_f3f4_ari_mean": 0.20747051593161578,
+    "raw_kmeans_k2_on_f3f4_ari_std": 0.25705977735804336
+  },
+  "mechanism_C_scale": {
+    "radius_auc_mean": 0.9975328776041668,
+    "radius_auc_std": 0.0003912727040567902,
+    "radius_oracle_ari_mean": 0.8804409638324809,
+    "radius_oracle_ari_std": 0.01138195201802423
+  },
+  "interpretation": "A single scalar (Euclidean distance from the global centroid of the relevant 2-feature pair), thresholded with an oracle cutoff, recovers mechanism B and mechanism C at ARI levels comparable to or exceeding Section 5.2's hand-informed pipeline (polar+DBSCAN for B: 0.915; kNN-density+GMM ceiling for C: 0.861), with a stable, low-variance oracle ceiling for both (SD 0.009-0.011 across 80 seeds). Plain K-Means on the same raw 2D coordinates remains unreliable for mechanism B (mean ARI 0.207, SD 0.257 across 80 seeds -- occasionally partial by chance, never stable), far below and far less consistent than the radius-threshold oracle. This confirms that the failure documented in this paper is specific to K-Means' multi-centroid Voronoi partitioning of non-blob-shaped structure (a line for B, a shared-centroid density contrast for C), not to Euclidean distance as a general-purpose statistic: a simple derived radial feature sidesteps the shape assumption entirely. This narrows and sharpens, but does not overturn, the paper's headline collapse finding (Section 6.1) and Theorem 1, and revises Section 5.2's reference ceiling for mechanism C upward (0.861 to 0.880)."
+}

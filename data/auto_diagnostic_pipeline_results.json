@@ -1,0 +1,64 @@
+{
+  "pair_diagnostics": {
+    "feature_1,feature_2": {
+      "distance_silhouette_k4": 0.602083335388517,
+      "angular_minority_cluster_fraction": 0.0,
+      "density_2comp_BIC_improvement": 1314.9667734952873
+    },
+    "feature_3,feature_4": {
+      "distance_silhouette_k4": 0.34564947139720525,
+      "angular_minority_cluster_fraction": 0.283125,
+      "density_2comp_BIC_improvement": 1973.3197029791208
+    },
+    "feature_5,feature_6": {
+      "distance_silhouette_k4": 0.31159064949954696,
+      "angular_minority_cluster_fraction": 0.0,
+      "density_2comp_BIC_improvement": 1486.43571988453
+    },
+    "feature_7,feature_8": {
+      "distance_silhouette_k4": 0.3127346612175143,
+      "angular_minority_cluster_fraction": 0.0,
+      "density_2comp_BIC_improvement": 1867.2578481559976
+    },
+    "feature_9,feature_10": {
+      "distance_silhouette_k4": 0.3105255622154007,
+      "angular_minority_cluster_fraction": 0.355,
+      "density_2comp_BIC_improvement": 1886.5329288343182
+    },
+    "feature_2,feature_5": {
+      "distance_silhouette_k4": 0.38459022073836646,
+      "angular_minority_cluster_fraction": 0.0,
+      "density_2comp_BIC_improvement": 1416.4052396050192
+    },
+    "feature_1,feature_8": {
+      "distance_silhouette_k4": 0.34348058510097984,
+      "angular_minority_cluster_fraction": 0.0,
+      "density_2comp_BIC_improvement": 1590.3581386164587
+    }
+  },
+  "auto_routing_decision": {
+    "detected_distance_pair": "feature_1,feature_2",
+    "detected_angular_pair": "feature_9,feature_10",
+    "detected_density_pair": "feature_3,feature_4"
+  },
+  "ground_truth_pairs_for_comparison": {
+    "true_distance_pair": "feature_1,feature_2",
+    "true_angular_pair": "feature_3,feature_4",
+    "true_density_pair": "feature_5,feature_6"
+  },
+  "auto_routing_correct": {
+    "distance": true,
+    "angular": false,
+    "density": false
+  },
+  "final_ARI_with_auto_detected_routing": {
+    "auto_distance_ARI": 0.9650082443959267,
+    "auto_angular_ARI": 0.004340086317494413,
+    "auto_density_ARI": -0.0005014441814214544
+  },
+  "comparison_to_hand_informed_pipeline": {
+    "hand_informed_distance_ARI": 0.9650082443959267,
+    "hand_informed_angular_ARI": 0.9153705484661201,
+    "hand_informed_density_ARI": 0.6621410799661955
+  }
+}

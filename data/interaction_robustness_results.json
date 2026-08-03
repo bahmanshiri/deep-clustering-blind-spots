@@ -1,0 +1,41 @@
+{
+  "multiseed_robustness": {
+    "n_seeds": 80,
+    "ari_k4_mean": 0.059439978844511444,
+    "ari_k4_std": 0.03502718702236866,
+    "ari_k4_min": 0.003222249716320235,
+    "ari_k4_max": 0.14775745231208057,
+    "sil_k4_mean": 0.3786728601794872,
+    "sil_k4_std": 0.006423403229647749,
+    "fraction_seeds_where_k4_is_silhouette_optimum": 1.0,
+    "ari_at_best_k_mean": 0.059439978844511444,
+    "ari_at_best_k_std": 0.03502718702236866,
+    "seed42_reference_ari_k4": 0.11469845191388345,
+    "seed42_reference_sil_k4": 0.3822239450351252
+  },
+  "mechanism_interaction_ablation": {
+    "n_seeds": 80,
+    "mean_ARI_k4_by_config": {
+      "A_only": 0.08034915838732054,
+      "A_plus_B": 0.05806304816811557,
+      "A_plus_C": 0.08195573553918006,
+      "A_plus_B_plus_C": 0.05943997884451145
+    },
+    "std_ARI_k4_by_config": {
+      "A_only": 0.035898413107514945,
+      "A_plus_B": 0.03306856701043196,
+      "A_plus_C": 0.035732427621950065,
+      "A_plus_B_plus_C": 0.03502718702236866
+    },
+    "mean_drop_from_A_only__A_plus_B": 0.022286110219204968,
+    "mean_drop_from_A_only__A_plus_C": -0.0016065771518595216,
+    "mean_drop_from_A_only__A_plus_B_plus_C__observed": 0.02090917954280912,
+    "mean_drop__additive_null_prediction": 0.020679533067345445,
+    "mean_interaction_effect": 0.000229646475463674,
+    "std_interaction_effect": 0.055354531361910576,
+    "interaction_effect_positive_fraction_of_seeds": 0.525,
+    "wilcoxon_observed_vs_additive_statistic": 1580.0,
+    "wilcoxon_observed_vs_additive_pvalue": 0.847858538655998,
+    "interpretation": "positive mean_interaction_effect => combining mechanisms B and C damages recovery of mechanism A MORE than the sum of their individual damages (super-additive / synergistic collapse); interaction_effect_positive_fraction_of_seeds reports how consistent this is across independent seeds, not just seed=42."
+  }
+}

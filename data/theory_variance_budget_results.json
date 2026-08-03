@@ -1,0 +1,79 @@
+{
+  "max_abs_off_block_correlation": 0.03519727647608721,
+  "mean_abs_off_block_correlation": 0.011831303330163025,
+  "within_block_rho": {
+    "A": 0.007000805829240605,
+    "B": 0.5301356713997939,
+    "C": 0.01602723467607437,
+    "D1": null,
+    "D2": null,
+    "D3": null,
+    "D4": null
+  },
+  "analytical_eigenvalues_block_diagonal_approx": [
+    1.530135671399794,
+    1.0160272346760744,
+    1.0070008058292406,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.9929991941707594,
+    0.9839727653239256,
+    0.4698643286002061
+  ],
+  "analytical_explained_variance_ratio": [
+    0.1530135671399794,
+    0.10160272346760743,
+    0.10070008058292405,
+    0.1,
+    0.1,
+    0.1,
+    0.1,
+    0.09929991941707594,
+    0.09839727653239257,
+    0.04698643286002061
+  ],
+  "true_pca_eigenvalues_full_matrix": [
+    1.534469810522148,
+    1.0698032448173969,
+    1.0333101458510412,
+    1.014817686740106,
+    1.013842527056449,
+    0.9882912507312153,
+    0.9838528646058403,
+    0.9608989017470808,
+    0.9320933885843189,
+    0.4686201793444008
+  ],
+  "true_pca_explained_variance_ratio": [
+    0.15344698105221485,
+    0.10698032448173972,
+    0.10333101458510416,
+    0.10148176867401064,
+    0.10138425270564494,
+    0.09882912507312157,
+    0.09838528646058407,
+    0.09608989017470812,
+    0.09320933885843193,
+    0.0468620179344401
+  ],
+  "l1_approximation_error": 0.022615940616406753,
+  "max_abs_approximation_error": 0.005377601014132288,
+  "interpretation": "If the block-diagonal-approximation EVR curve tracks the true EVR curve closely (small L1/max error) while ALSO being near-uniform (no eigenvalue >> 1), this supports the structural claim that near-uniform spread follows from (i) cross-mechanism independence (near-zero off-block correlation) and (ii) low within-mechanism linear correlation (each block's own rho is small), rather than being a coincidence of this particular seed.",
+  "theorem_1_verification": {
+    "theorem_statement": "Theorem 1 (cross-block eigenvalue perturbation bound). Let R be a dxd correlation matrix partitioned into blocks, R = R_B + E where R_B keeps only within-block entries of R and E keeps only cross-block entries. If every cross-block correlation has |R_ij| <= epsilon, then for every eigenvalue index i: |lambda_i(R) - lambda_i(R_B)| <= ||E||_2 <= (d-1)*epsilon. Proof: Weyl's inequality gives the first step (|lambda_i(R)-lambda_i(R_B)| <= ||R-R_B||_2 = ||E||_2 for symmetric R,R_B); the Gershgorin circle theorem applied to the zero-diagonal symmetric matrix E gives ||E||_2 <= max_i sum_j|E_ij| <= (d-1)*epsilon since each row has at most d-1 off-diagonal entries each bounded by epsilon. Dividing by trace(R)=trace(R_B)=d gives the same bound, ~epsilon, for explained-variance-ratio differences, for ANY d -- this is the general, distribution-free statement the block-diagonal empirical check above (Proposition 1) is a numerically-verified special case of.",
+    "epsilon_max_abs_cross_block_correlation": 0.03519727647608721,
+    "d": 10,
+    "observed_max_eigenvalue_difference": 0.053776010141322494,
+    "weyl_exact_spectral_norm_bound": 0.0727174202639908,
+    "gershgorin_bound_data_specific": 0.14200721160445826,
+    "loose_general_distribution_free_bound_d_minus_1_times_epsilon": 0.3167754882847849,
+    "chain_holds": true,
+    "same_quantities_in_explained_variance_ratio_units": {
+      "observed_max_EVR_error": 0.005377601014132249,
+      "weyl_exact_bound": 0.00727174202639908,
+      "loose_general_bound": 0.031677548828478494
+    }
+  }
+}

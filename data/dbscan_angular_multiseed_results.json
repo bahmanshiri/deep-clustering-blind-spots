@@ -1,0 +1,30 @@
+{
+  "n_seeds": 80,
+  "seed_range": [
+    1000,
+    1079
+  ],
+  "routing_accuracy": {
+    "distance_pct_correct": 100.0,
+    "angular_pct_correct": 60.0,
+    "density_pct_correct": 0.0
+  },
+  "ari_when_routed": {
+    "distance_mean": 0.967400980025249,
+    "distance_sd": 0.0037840388982357098,
+    "angular_mean": 0.6687942879213213,
+    "angular_sd": 0.41277501865920874,
+    "density_mean": -0.0005886396465003944,
+    "density_sd": 0.004415876905627982
+  },
+  "comparison_to_original_single_seed_42_report": {
+    "original_seed42_angular_routing_correct": false,
+    "original_seed42_angular_ari": 0.004340086317494413,
+    "note": "The original single-seed report (seed=42) showed 0/1 correct routing for the angular/relational pair. The N=80 re-run below shows whether that was representative or a single unlucky/lucky draw."
+  },
+  "comparison_to_ics_kurtosis_screening_N80": {
+    "ics_angular_routing_pct_correct": 100.0,
+    "ics_oracle_ari_mean": 0.938,
+    "note": "ICS's 100% routing accuracy and 0.938 oracle ARI (Section 5.5) are now compared against a DBSCAN-angular baseline evaluated with the SAME N=80 seeds and SAME candidate-pair protocol, closing the apples-to-oranges gap in the original comparison."
+  }
+}

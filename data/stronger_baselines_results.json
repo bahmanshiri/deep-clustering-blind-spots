@@ -1,0 +1,91 @@
+{
+  "linear_pca": {
+    "silhouette_by_k": {
+      "2": 0.29210386336970273,
+      "3": 0.3204884054486553,
+      "4": 0.3822239450351252,
+      "5": 0.3131254221153156,
+      "6": 0.3316159959427762
+    },
+    "ari_by_k": {
+      "2": 0.06062566654571074,
+      "3": 0.10630931156752295,
+      "4": 0.11469845191388345,
+      "5": 0.08007950631837008,
+      "6": 0.07104732714824961
+    },
+    "best_k_by_silhouette": 4,
+    "ari_at_silhouette_best_k": 0.11469845191388345,
+    "ari_at_k4": 0.11469845191388345,
+    "ari_relational_hidden_at_k4": 0.2367005371225226,
+    "ari_scale_hidden_at_k4": 0.0012411395703716029
+  },
+  "sparse_pca": {
+    "silhouette_by_k": {
+      "2": 0.29496704302830756,
+      "3": 0.32403067798098695,
+      "4": 0.38430780026894207,
+      "5": 0.3127815687758292,
+      "6": 0.33273367769050477
+    },
+    "ari_by_k": {
+      "2": 0.07373803554026157,
+      "3": 0.12366542675844694,
+      "4": 0.1298113191770013,
+      "5": 0.08594982858688215,
+      "6": 0.07651142028053115
+    },
+    "best_k_by_silhouette": 4,
+    "ari_at_silhouette_best_k": 0.1298113191770013,
+    "ari_at_k4": 0.1298113191770013,
+    "ari_relational_hidden_at_k4": 0.2392385988415726,
+    "ari_scale_hidden_at_k4": 0.001143346956351616,
+    "component_sparsity_nonzero_loadings": [
+      6,
+      5
+    ]
+  },
+  "kernel_pca_rbf": {
+    "silhouette_by_k": {
+      "2": 0.385542028782801,
+      "3": 0.4132142948385222,
+      "4": 0.5053633519597384,
+      "5": 0.45130062786512426,
+      "6": 0.4071031437145086
+    },
+    "ari_by_k": {
+      "2": 0.48452416632601736,
+      "3": 0.6351760535955522,
+      "4": 0.9448743413615753,
+      "5": 0.7380043390297663,
+      "6": 0.6677963989766607
+    },
+    "best_k_by_silhouette": 4,
+    "ari_at_silhouette_best_k": 0.9448743413615753,
+    "ari_at_k4": 0.9448743413615753,
+    "ari_relational_hidden_at_k4": 1.830395033843895e-05,
+    "ari_scale_hidden_at_k4": 3.951584514403498e-05
+  },
+  "tsne": {
+    "silhouette_by_k": {
+      "2": 0.3863169550895691,
+      "3": 0.4023354649543762,
+      "4": 0.4254675507545471,
+      "5": 0.4068586826324463,
+      "6": 0.4066109359264374
+    },
+    "ari_by_k": {
+      "2": 0.3883635977537861,
+      "3": 0.4733481789578167,
+      "4": 0.7322580810787636,
+      "5": 0.6729033846875608,
+      "6": 0.6720386260331958
+    },
+    "best_k_by_silhouette": 4,
+    "ari_at_silhouette_best_k": 0.7322580810787636,
+    "ari_at_k4": 0.7322580810787636,
+    "ari_relational_hidden_at_k4": 0.003519057480683414,
+    "ari_scale_hidden_at_k4": 3.720193783971481e-05
+  },
+  "_note_umap": "umap-learn is not installed in this sandboxed, network-disabled environment and could not be added; readers wishing to check UMAP specifically should run pip install umap-learn and re-execute this script, which will pick it up automatically if the import is added."
+}

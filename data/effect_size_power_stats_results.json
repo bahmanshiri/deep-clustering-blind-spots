@@ -1,0 +1,78 @@
+{
+  "effect_sizes": {
+    "n_seeds": 80,
+    "cohens_d_paired_interaction": 0.004148648174116709,
+    "cliffs_delta_observed_vs_additive": -0.0040625,
+    "interpretation": "On the full N=80 replication, Cohen's d_z = 0.0041 is a negligible effect size (< 0.05, well under even the 0.2 'small effect' convention) -- consistent with the TOST equivalence result below, not merely a non-significant p-value."
+  },
+  "pilot_retrospective_design_analysis": {
+    "note": "Descriptive context ONLY. This uses the N=20 pilot's own observed effect size to compute the pilot's retrospective power, which is a circular statistic if treated as evidence (a non-significant pilot's own point estimate will almost always look 'underpowered' for itself). We report it only to motivate why a properly powered replication -- sized against a pre-specified effect, not this pilot's own noisy estimate -- was needed; the actual evidence for 'no meaningful interaction' comes from the TOST equivalence test and 95% CI on the N=80 replication below, not from this block.",
+    "n_pilot_seeds": 20,
+    "pilot_cohens_d_paired": 0.32680158623014727,
+    "pilot_wilcoxon_pvalue": 0.2305126190185547,
+    "pilot_retrospective_power_at_own_effect_size": 0.2640386615758764,
+    "n_required_for_80pct_power_at_pilot_effect_size": 76
+  },
+  "equivalence_test_tost_n80": {
+    "method": "Two one-sided tests (TOST), paired t-test formulation",
+    "sesoi_cohens_dz": 0.2,
+    "sesoi_note": "SESOI = Cohen's conventional 'small effect' boundary (d_z=0.20), used as a default in the absence of a domain-specific threshold; reported as a stated convention, not derived from the data.",
+    "sesoi_raw_ari_units": 0.011070906272382115,
+    "n_seeds": 80,
+    "mean_interaction_effect": 0.00022964647546367642,
+    "p_tost": 0.04184898907297576,
+    "equivalent_to_zero_at_alpha05": true,
+    "interpretation": "The N=80 replication's mean interaction effect (0.0002) is statistically equivalent to zero within a small-effect bound (d_z=0.20, i.e. 0.0111 raw ARI units), p=0.04185. Unlike the pilot's retrospective power figure above, this directly tests (rather than merely fails to reject) the claim that any true interaction effect is too small to be practically meaningful."
+  },
+  "confidence_interval_95pct_n80": {
+    "mean_interaction_effect": 0.00022964647546367642,
+    "ci_lower": -0.01208890104804464,
+    "ci_upper": 0.012548193998971995,
+    "interpretation": "95% CI for the true mean interaction effect: [-0.0121, 0.0125], a narrow interval straddling zero, consistent with the TOST equivalence result above."
+  },
+  "ols_anova_decomposition": {
+    "model": "ari_k4 ~ intercept + B + C + B:C, OLS, N=80 (20 seeds x 4 configs)",
+    "coefficients": {
+      "intercept": {
+        "coef": 0.08034915838732049,
+        "se": 0.003907499361092047,
+        "t": 20.56280781191604,
+        "p": 0.0
+      },
+      "B": {
+        "coef": -0.02228611021920493,
+        "se": 0.005526038591420576,
+        "t": -4.032926996529688,
+        "p": 6.911974153522848e-05
+      },
+      "C": {
+        "coef": 0.0016065771518595506,
+        "se": 0.005526038591420576,
+        "t": 0.29072854365400813,
+        "p": 0.7714496529579482
+      },
+      "B:C (interaction)": {
+        "coef": -0.0002296464754637309,
+        "se": 0.007814998722184094,
+        "t": -0.029385350353525144,
+        "p": 0.9765758062575656
+      }
+    },
+    "note": "The B:C coefficient is the regression-based analogue of the interaction effect tested by the paired Wilcoxon test above; both approaches test the same qualitative hypothesis from different angles (nonparametric vs. parametric)."
+  },
+  "multiple_testing_correction": {
+    "family": [
+      "paired_wilcoxon_observed_vs_additive",
+      "ols_BC_interaction_term"
+    ],
+    "raw_p_values": [
+      0.847858538655998,
+      0.9765758062575656
+    ],
+    "bh_fdr_adjusted_p_values": [
+      0.9765758062575656,
+      0.9765758062575656
+    ],
+    "note": "Only two tests target the same hypothesis in this study, so the correction has limited effect, but it is reported for completeness and statistical rigor rather than presenting two uncorrected p-values side by side."
+  }
+}
