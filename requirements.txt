@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+torch  # required for deep_clustering_baseline.py; GPU strongly recommended
+hdbscan  # required for ICS_Eigengap_HDBSCAN.py (Priority 5)
+# Optional, used only if available (see README "Known gaps"):
+# statsmodels
+# umap-learn
