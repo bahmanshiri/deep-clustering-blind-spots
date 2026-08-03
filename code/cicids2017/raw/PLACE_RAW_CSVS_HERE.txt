@@ -1,0 +1,6 @@
+Place the 8 raw CIC-IDS2017 MachineLearningCVE CSV files here
+(Sharafaldin, Lashkari and Ghorbani, 2018; Canadian Institute for
+Cybersecurity, University of New Brunswick). Not redistributed in this
+package for size reasons -- see paper Appendix A and README.md.
+
+01_extract_pool.py reads every *.csv file in this directory.
